@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+	
+	<title>Krishna</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- STYLESHEETS -->
+
+	<link rel="stylesheet" href="bootstrap.min.css" type="text/css" media="all">
+	<link rel="stylesheet" href="all.min.css" type="text/css" media="all">
+
+	<link rel="stylesheet" href="slick.css" type="text/css" media="all">
+
+	<link rel="stylesheet" href="animate.css" type="text/css" media="all">
+
+	<link rel="stylesheet" href="style.css" type="text/css" media="all">
+
+
+<style type="text/css">
+
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-weight: 400;
+  font-style:  italic;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 500;
+  font-style:  normal;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Medium.woff2') format('woff2');
+}
+@font-face {
+  font-weight: 500;
+  font-style:  italic;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-MediumItalic.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Bold.woff2') format('woff2');
+}
+@font-face {
+  font-weight: 700;
+  font-style:  italic;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-BoldItalic.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 900;
+  font-style:  normal;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Black.woff2') format('woff2');
+}
+@font-face {
+  font-weight: 900;
+  font-style:  italic;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-BlackItalic.woff2') format('woff2');
+}</style>
+</head>
+
+<body data-gr-c-s-loaded="true">
+
+
+<!-- desktop header -->
+<header class="desktop-header-3 fixed-top">
+
+    <div class="container">
+	
+        <nav class="navbar navbar-expand-lg navbar-dark">
+           
+            <b class="navbar-brand">OMK</b> 
+
+            <button aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarNavDropdown" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto scrollspy">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="#tools" class="nav-link">AI</a></li>
+                    <li class="nav-item"><a href="#services" class="nav-link">Features</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </div>
+
+</header>
+
+<!-- main layout -->
+<main class="content-3">
+	
+	<!-- section home -->
+	<section id="home" class="home d-flex align-items-center">
+		<div class="container">
+
+			<!-- intro -->
+			<div class="intro">
+				<!-- avatar image -->
+				<img src="data:image/png;base64,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" style="width: 150px;border-radius: 100px" class="mb-4">
+
+				<!-- info -->
+				<h1 class="mb-2 mt-0">OMK</h1>
+				<span>A <span class="text-rotating morphext"><span class="animated bounceIn"> School </span></span></span>
+			</div>
+
+			<!-- parallax layers -->
+			<div class="parallax" data-relative-input="true" style="transform: translate3d(0px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden;">
+
+				<svg width="27" height="29" data-depth="0.3" class="layer p1" xmlns="http://www.w3.org/2000/svg" style="transform: translate3d(-7.20601px, 17.2034px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block;"><path d="M21.15625.60099c4.37954 3.67487 6.46544 9.40612 5.47254 15.03526-.9929 5.62915-4.91339 10.30141-10.2846 12.25672-5.37122 1.9553-11.3776.89631-15.75715-2.77856l2.05692-2.45134c3.50315 2.93948 8.3087 3.78663 12.60572 2.22284 4.297-1.5638 7.43381-5.30209 8.22768-9.80537.79387-4.50328-.8749-9.08872-4.37803-12.02821L21.15625.60099z" fill="#FFD15C" fill-rule="evenodd"></path></svg>
+
+				<svg width="26" height="26" data-depth="0.2" class="layer p2" xmlns="http://www.w3.org/2000/svg" style="transform: translate3d(-4.80401px, 11.4689px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"><path d="M13 3.3541L2.42705 24.5h21.1459L13 3.3541z" stroke="#FF4C60" stroke-width="3" fill="none" fill-rule="evenodd"></path></svg>
+
+				<svg width="30" height="25" data-depth="0.3" class="layer p3" xmlns="http://www.w3.org/2000/svg" style="transform: translate3d(-7.20601px, 17.2034px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"><path d="M.1436 8.9282C3.00213 3.97706 8.2841.92763 14.00013.92796c5.71605.00032 10.9981 3.04992 13.85641 8 2.8583 4.95007 2.8584 11.0491-.00014 16.00024l-2.77128-1.6c2.28651-3.96036 2.28631-8.84002.00011-12.8002-2.2862-3.96017-6.5124-6.40017-11.08513-6.4-4.57271.00018-8.79872 2.43984-11.08524 6.4002l-2.77128-1.6z" fill="#44D7B6" fill-rule="evenodd"></path></svg>
+
+				<svg width="15" height="23" data-depth="0.6" class="layer p4" xmlns="http://www.w3.org/2000/svg" style="transform: translate3d(-14.412px, 34.4068px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"><rect transform="rotate(30 9.86603 10.13397)" x="7" width="3" height="25" rx="1.5" fill="#FFD15C" fill-rule="evenodd"></rect></svg>
+
+				<svg width="15" height="23" data-depth="0.2" class="layer p5" xmlns="http://www.w3.org/2000/svg" style="transform: translate3d(-4.80401px, 11.4689px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"><rect transform="rotate(30 9.86603 10.13397)" x="7" width="3" height="25" rx="1.5" fill="#6C6CE5" fill-rule="evenodd"></rect></svg>
+
+				<svg width="49" height="17" data-depth="0.5" class="layer p6" xmlns="http://www.w3.org/2000/svg" style="transform: translate3d(-12.01px, 28.6724px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"><g fill="#FF4C60" fill-rule="evenodd"><path d="M.5 16.5c0-5.71709 2.3825-10.99895 6.25-13.8567 3.8675-2.85774 8.6325-2.85774 12.5 0C23.1175 5.50106 25.5 10.78292 25.5 16.5H23c0-4.57303-1.90625-8.79884-5-11.08535-3.09375-2.28652-6.90625-2.28652-10 0C4.90625 7.70116 3 11.92697 3 16.5H.5z"></path><path d="M23.5 16.5c0-5.71709 2.3825-10.99895 6.25-13.8567 3.8675-2.85774 8.6325-2.85774 12.5 0C46.1175 5.50106 48.5 10.78292 48.5 16.5H46c0-4.57303-1.90625-8.79884-5-11.08535-3.09375-2.28652-6.90625-2.28652-10 0-3.09375 2.28651-5 6.51232-5 11.08535h-2.5z"></path></g></svg>
+
+				<svg width="26" height="26" data-depth="0.4" class="layer p7" xmlns="http://www.w3.org/2000/svg" style="transform: translate3d(-9.60801px, 22.9379px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"><path d="M13 22.6459L2.42705 1.5h21.1459L13 22.6459z" stroke="#FFD15C" stroke-width="3" fill="none" fill-rule="evenodd"></path></svg>
+
+				<svg width="19" height="21" data-depth="0.3" class="layer p8" xmlns="http://www.w3.org/2000/svg" style="transform: translate3d(-7.20601px, 17.2034px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"><rect transform="rotate(-40 6.25252 10.12626)" x="7" width="3" height="25" rx="1.5" fill="#6C6CE5" fill-rule="evenodd"></rect></svg>
+
+				<svg width="30" height="25" data-depth="0.3" data-depth-y="-1.30" class="layer p9" xmlns="http://www.w3.org/2000/svg" style="transform: translate3d(-7.20601px, 17.2034px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"><path d="M29.8564 16.0718c-2.85854 4.95114-8.1405 8.00057-13.85654 8.00024-5.71605-.00032-10.9981-3.04992-13.85641-8-2.8583-4.95007-2.8584-11.0491.00014-16.00024l2.77128 1.6c-2.28651 3.96036-2.28631 8.84002-.00011 12.8002 2.2862 3.96017 6.5124 6.40017 11.08513 6.4 4.57271-.00018 8.79872-2.43984 11.08524-6.4002l2.77128 1.6z" fill="#6C6CE5" fill-rule="evenodd"></path></svg>
+
+				<svg width="47" height="29" data-depth="0.2" class="layer p10" xmlns="http://www.w3.org/2000/svg" style="transform: translate3d(-4.80401px, 11.4689px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"><g fill="#44D7B6" fill-rule="evenodd"><path d="M46.78878 17.19094c-1.95535 5.3723-6.00068 9.52077-10.61234 10.8834-4.61167 1.36265-9.0893-.26708-11.74616-4.27524-2.65686-4.00817-3.08917-9.78636-1.13381-15.15866l2.34923.85505c-1.56407 4.29724-1.2181 8.92018.90705 12.12693 2.12514 3.20674 5.70772 4.5107 9.39692 3.4202 3.68921-1.0905 6.92581-4.40949 8.48988-8.70673l2.34923.85505z"></path><path d="M25.17585 9.32448c-1.95535 5.3723-6.00068 9.52077-10.61234 10.8834-4.61167 1.36264-9.0893-.26708-11.74616-4.27525C.16049 11.92447-.27182 6.14628 1.68354.77398l2.34923.85505c-1.56407 4.29724-1.2181 8.92018.90705 12.12692 2.12514 3.20675 5.70772 4.5107 9.39692 3.4202 3.68921-1.0905 6.92581-4.40948 8.48988-8.70672l2.34923.85505z"></path></g></svg>
+
+				<svg width="33" height="20" data-depth="0.5" class="layer p11" xmlns="http://www.w3.org/2000/svg" style="transform: translate3d(-12.01px, 28.6724px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"><path d="M32.36774.34317c.99276 5.63023-1.09332 11.3614-5.47227 15.03536-4.37895 3.67396-10.3855 4.73307-15.75693 2.77837C5.76711 16.2022 1.84665 11.53014.8539 5.8999l3.15139-.55567c.7941 4.50356 3.93083 8.24147 8.22772 9.8056 4.29688 1.56413 9.10275.71673 12.60554-2.2227C28.34133 9.98771 30.01045 5.4024 29.21635.89884l3.15139-.55567z" fill="#FFD15C" fill-rule="evenodd"></path></svg>
+
+			</div>
+		</div>
+		
+	</section>
+
+	<!-- section about -->
+	<section id="about">
+
+		<div class="container">
+			
+			<!-- section title -->
+			<h2 class="section-title wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">About Us</h2>
+
+			<div class="spacer" data-height="60" style="height: 60px;"></div>
+			
+			<div class="row">
+
+				<div class="col-md-3">
+					<div class="text-center text-md-left">
+						<!-- avatar image -->
+						<img src="https://fj-employer-blog.s3.amazonaws.com/employer-blog/wp-content/uploads/2020/08/25093203/benefits-of-flexible-work-for-companies-and-employees_.jpg" style="width: 430px;border-radius: 10px; height: 340px;;" class="mb-4">
+					</div>
+					<div class="spacer d-md-none d-lg-none" data-height="30" style="height: 30px;"></div>
+				</div>
+
+				<div class="col-md-9 triangle-left-md triangle-top-sm">
+					<div class="rounded bg-white shadow-dark padding-30">
+						<div class="row">
+							<div class="col-md-6">
+								<!-- about text -->
+								<p>OMK School is an excellent institution known for its commitment to educational excellence and nurturing environment. The staff is supportive and collaborative, and the school provides state-of-the-art facilities. Professional development is prioritized, and diversity is celebrated, making it a fulfilling experience to work at OMK School.</p>
+
+								<div class="spacer d-md-none d-lg-none" data-height="30" style="height: 30px;"></div>
+							</div>
+							
+							
+
+							
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- row end -->
+
+		
+
+		</div>
+		
+	</section>
+	
+
+      </div>
+
+    </div>
+
+  </section>
+  
+ 
+
+
+  <!-- section projects -->
+  <section id="projects">
+
+    <div class="container">
+      
+      <!-- section title -->
+      <h2 class="section-title wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">My Projects</h2>
+
+      <div class="spacer" data-height="60" style="height: 60px;"></div>
+      
+      <div class="row blog-wrapper">
+        
+        <!-- projects item -->
+        <div class="col-md-4">
+          <div class="blog-item rounded bg-white shadow-dark wow fadeIn" data-wow-delay="200ms" style="visibility: visible; animation-delay: 200ms; animation-name: fadeIn;">
+            <div class="thumb">
+              <a href="https://mahdihat791.github.io/AI-Mario-Game/">
+                <img src="mario1.webp" alt="blog-title" height="50px">
+              </a>
+            </div>
+            <div class="details">
+              <h4 class="my-0 title">
+              	<a href="https://mahdihat791.github.io/AI-Mario-Game/">AI Mario Game</a>
+              </h4>
+              <ul class="list-inline meta mb-0 mt-2">
+                <li class="list-inline-item">27 September, 2022</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+		<div class="col-md-4">
+			<div class="blog-item rounded bg-white shadow-dark wow fadeIn" data-wow-delay="200ms" style="visibility: visible; animation-delay: 200ms; animation-name: fadeIn;">
+			  <div class="thumb">
+				<a href="https://krishnathecodingwizard.github.io/Real/">
+				  <img src="r.webp" alt="blog-title">
+				</a>
+			  </div>
+			  <div class="details">
+				<h4 class="my-0 title">
+					<a href="https://krishnathecodingwizard.github.io/Real/">Real Time Drawing</a>
+				</h4>
+				<ul class="list-inline meta mb-0 mt-2">
+				  <li class="list-inline-item">1 August, 2022</li>
+				</ul>
+			  </div>
+			</div>
+		  </div>
+
+		  <div class="col-md-4">
+			<div class="blog-item rounded bg-white shadow-dark wow fadeIn" data-wow-delay="200ms" style="visibility: visible; animation-delay: 200ms; animation-name: fadeIn;">
+			  <div class="thumb">
+				<a href="div class=col-md-4">
+			<div class="blog-item rounded bg-white shadow-dark wow fadeIn" data-wow-delay="200ms" style="visibility: visible; animation-delay: 200ms; animation-name: fadeIn;">
+			  <div class="thumb">
+				<a href="https://krishna-themastercoder.github.io/Hand-Gesture-WEB-APP/">
+				  <img src="Hand.jpg" alt="blog-title">
+				</a>
+			  </div>
+			  <div class="details">
+				<h4 class="my-0 title">
+					<a href="https://krishna-themastercoder.github.io/Hand-Gesture-WEB-APP/">Hand Gesture WEB APP</a>
+				</h4>
+				<ul class="list-inline meta mb-0 mt-2">
+				  <li class="list-inline-item">09 July, 2022</li>
+				</ul>
+			  </div>
+			</div>
+		  </div>
+
+        <!-- end project item -->
+
+      </div>
+
+    </div>
+
+  </section>
+  
+    <!-- section tools -->
+  <section id="tools">
+
+    <div class="container">
+      
+      <!-- section title -->
+      <h2 class="section-title wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">Introduction to AI</h2>
+
+      <div class="spacer" data-height="60" style="height: 60px;"></div>
+      
+      <!-- portolio wrapper -->
+      <div class="row portfolio-wrapper" style="position: relative; height: 595.062px;">
+        
+        <!-- tool item -->
+        <div class="col-md-4 col-sm-6 grid-item art" data-toggle="modal" data-target="#myModal" style="position: absolute; left: 0%; top: 0px;">
+            <div class="portfolio-item rounded shadow-dark">
+              <div class="details">
+                <h4 class="title">ml5.js</h4>
+              </div>
+              <div class="thumb">
+                <img src="ai.webp" alt="Portfolio-title">
+                <div class="mask"></div>
+              </div>
+            </div>
+        </div>
+        <!-- end tool item -->
+
+      </div>
+    </div>
+
+  </section>
+	
+
+  <!-- section services -->
+  <section id="services">
+
+    <div class="container">
+      
+      <!-- section title -->
+      <h2 class="section-title wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">Features</h2>
+
+      <div class="spacer" data-height="60" style="height: 60px;"></div>
+      
+      <div class="row">
+
+        <!-- service box -->
+        <div class="col-md-4">
+          <div class="service-box rounded data-background padding-30 text-center shadow-yellow" data-color="#F9D74C" style="background-color: rgb(249, 215, 76);">
+            <img src="service-2.svg">
+            <h3 class="mb-3 mt-0">Features</h3>
+            <p class="mb-0">Eliminate dull and boring tasks.
+				Data ingestion.
+				Imitates human cognition.
+				Futuristic.
+				Prevent natural disasters.
+				Facial Recognition and Chatbots.
+				</p>
+          </div>
+          <div class="spacer d-md-none d-lg-none" data-height="30" style="height: 30px;"></div>
+        </div>
+        <!-- end service box -->
+
+      </div>
+
+    </div>
+    
+  </section>
+		
+	
+
+
+
+            <span class="line"></span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+    
+  </section>
+	
+	<!-- section funfacts -->
+	<section>
+
+		<div class="container">
+			
+			<!-- section title -->
+			<h2 class="section-title wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">Best Programming Languages for AI Development</h2>
+
+			<div class="spacer" data-height="60" style="height: 60px;"></div>
+			
+			<!-- funfacts wrapper -->
+			<div class="testimonials-wrapper slick-initialized slick-slider slick-dotted" role="toolbar">
+				
+				<!-- funfacts item -->
+			<div aria-live="polite" class="slick-list draggable"><div class="slick-track" role="listbox" style="opacity: 1; width: 2800px; transform: translate3d(-700px, 0px, 0px);">
+
+        	 <div class="testimonial-item text-center mx-auto slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1" style="width: 700px;">
+  			</div>
+
+      		 <div class="testimonial-item text-center mx-auto slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide00" style="width: 700px;">
+				<div class="mb-3 mx-auto">
+
+					<img style="border-radius: 20px;" class="img-responsive" src="P_langauges.png" width="700px">						
+				</div>
+
+					<h4 class="mt-3 mb-0">Progamming Languages</h4>
+					
+					<div class="bg-white padding-30 shadow-dark rounded triangle-top position-relative mt-4">
+						<p class="mb-0">Python | Java | JS | C++ | Lisp</p>
+					</div>
+				</div>
+
+      </div></div>
+				
+				
+
+			</div>
+
+
+		</div>
+
+	</section>
+	
+  
+	<!-- section contact -->
+	<section id="contact" style="background: #353353;padding: 15px;">
+
+		<div class="container">
+			
+			<!-- section title -->
+			<h2 class="section-title wow fadeInUp" style="margin-left:0px;color: white;visibility: visible; animation-name: fadeInUp;">Get In Touch</h2>
+
+			
+			<div class="row">
+				
+				<div class="col-md-8">
+
+					<h3 class="wow fadeInUp" style="color: white;visibility: visible; animation-name: fadeInUp;">Krishna</h3>
+				    <hr style="border: 0.5px solid white;">
+            		<p style="margin: 5px; color: white; display: inline-block;">Please free feel to contact me on my social handles</p>
+
+				</div>
+
+				<div class="col-md-4">
+
+  				    <h3 class="wow fadeInUp" style="color: white;visibility: visible; animation-name: fadeInUp;">FOLLOW ME</h3>
+   					<hr style="border: 0.5px solid white;">
+      				<p style="color: white;">Let us be social</p>
+
+				    <a href="#">
+				      <img src="instagram.png" style="width: 40px;margin: 5px">
+					  <h6 style="color:red;">Instragram.com</h6>
+					  <img src="abcd.png" style="width: 40px;margin: 5px">
+					  <h6 style="color:red;"	>Gmail.com</h6>
+				    </a>
+				</div>
+
+			</div>
+
+		</div>
+
+	</section>
+
+	
+</main>
+
+<!-- Go to top button -->
+<a href="javascript:" id="return-to-top" style="display: none;">
+  <img src="go_to_top.png">
+</a>
+
+<!-- modal -->
+<div id="myModal" class="modal fade ">
+    <div class="modal-dialog" >
+          <!-- Modal content-->
+        <div class="modal-content">
+      
+            <button class="close" data-dismiss="modal" style="text-align: right;padding: 10px;">&times;</button>
+            <hr>
+            <div class="modal-body">
+              <p>AI, or Artificial Intelligence, is a branch of computer science that focuses on creating smart machines capable of mimicking human intelligence. These intelligent machines can perform tasks that typically require human cognition, such as problem-solving, decision-making, and language understanding. AI systems can process and analyze large amounts of data, recognize patterns, and learn from experience to improve their performance over time. AI technology has the potential to transform various industries, including healthcare, finance, and transportation, by automating processes and providing valuable insights. However, it also raises concerns about privacy, job displacement, and ethical considerations. In summary, AI is a field that aims to develop machines that can think, learn, and behave like humans, with the goal of improving efficiency and enhancing our everyday lives.</p>
+             </div>
+
+        </div>
+    </div>
+ </div>
+ <!-- end modal -->
+
+<!-- Go to top button -->
+<a href="javascript:" id="return-to-top" style="display: none;">
+  <img src="go_to_top.png">
+</a>
+
+
+<!-- SCRIPTS -->
+<script src="jquery-1.12.3.min.js"></script>
+<script src="jquery.easing.min.js"></script>
+<script src="jquery.waypoints.min.js"></script>
+<script src="jquery.counterup.min.js"></script>
+<script src="popper.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="isotope.pkgd.min.js"></script>
+<script src="infinite-scroll.min.js"></script>
+<script src="imagesloaded.pkgd.min.js"></script>
+<script src="slick.min.js"></script>
+<script src="contact.js"></script>
+<script src="validator.js"></script>
+<script src="wow.min.js"></script>
+<script src="morphext.min.js"></script>
+<script src="parallax.min.js"></script>
+<script src="jquery.magnific-popup.min.js"></script>
+
+<script src="custom.js"></script>
+
+      
+
+
+</body>
+
+
+</html>
